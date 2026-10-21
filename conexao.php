@@ -1,6 +1,6 @@
 <?php
 $servidor = "localhost";
-$banco = "cadastro_pesssoas";
+$banco = "cadastro_pessoas";
 $usuario = "root";
 $senha = "";
 try {
