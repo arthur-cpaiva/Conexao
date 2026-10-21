@@ -1,0 +1,77 @@
+/* Configuração geral da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* Caixa principal do formulário */
+.container {
+    background-color: white;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #243447;
+    margin-bottom: 25px;
+}
+
+/* Rótulos dos campos */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Campos do formulário */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+/* Destaque ao selecionar um campo */
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* Botão de cadastro */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Efeito ao passar o mouse */
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 500px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
