@@ -1,77 +1,267 @@
-/* Configuração geral da página */
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f4f8;
     margin: 0;
-    padding: 40px 20px;
+    padding: 35px;
 }
-
-/* Caixa principal do formulário */
+ 
+/* Painel principal: mais espaço para as informações */
 .container {
     background-color: white;
-    max-width: 450px;
+    width: 100%;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
-
+ 
 /* Título */
 h1 {
     text-align: center;
     color: #243447;
-    margin-bottom: 25px;
+    font-size: 36px;
+    margin: 0 0 30px;
 }
-
-/* Rótulos dos campos */
+ 
+/* Rótulos dos campos do formulário */
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
     color: #333;
+    font-size: 18px;
 }
-
+ 
 /* Campos do formulário */
 input {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
     box-sizing: border-box;
-    font-size: 15px;
+    font-size: 17px;
 }
-
+ 
 /* Destaque ao selecionar um campo */
 input:focus {
     outline: none;
     border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
-
+ 
 /* Botão de cadastro */
 button {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     background-color: #2563eb;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 6px;
+    font-size: 18px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 12px;
 }
-
+ 
 /* Efeito ao passar o mouse */
 button:hover {
     background-color: #1d4ed8;
 }
-
-/* Ajuste para telas pequenas */
-@media (max-width: 500px) {
+ 
+/* Parágrafo com o total de registros */
+.container p {
+    font-size: 21px;
+    color: #243447;
+    margin: 20px 0;
+}
+ 
+/* Área da tabela */
+.container table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-top: 25px;
+}
+ 
+/* Cabeçalho e células */
+.container table th,
+.container table td {
+    padding: 24px 22px;
+    text-align: left;
+    border-bottom: 1px solid #cbd5e1;
+    font-size: 20px;
+}
+ 
+/* Cabeçalho da tabela */
+.container table thead th {
+    background-color: #243b55;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+ 
+/* Largura das colunas */
+.container table th:nth-child(1),
+.container table td:nth-child(1) {
+    width: 8%;
+}
+ 
+.container table th:nth-child(2),
+.container table td:nth-child(2) {
+    width: 25%;
+}
+ 
+.container table th:nth-child(3),
+.container table td:nth-child(3) {
+    width: 42%;
+}
+ 
+.container table th:nth-child(4),
+.container table td:nth-child(4) {
+    width: 25%;
+}
+ 
+/* Primeira cor das linhas */
+.container table tbody tr:nth-child(odd) {
+    background-color: #d2e3f4;
+}
+ 
+/* Segunda cor das linhas */
+.container table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+ 
+/* Efeito ao passar o mouse */
+.container table tbody tr:hover {
+    background-color: #bcd5ee;
+}
+ 
+/* Link para voltar ao cadastro */
+.container a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2563eb;
+    font-size: 19px;
+}
+ 
+/* Ajuste para telas médias */
+@media (max-width: 800px) {
     body {
-        padding: 20px 12px;
+        padding: 18px;
     }
-
+ 
     .container {
-        padding: 20px;
+        padding: 24px;
+    }
+ 
+    .container table th,
+    .container table td {
+        padding: 18px 14px;
+        font-size: 17px;
+    }
+ 
+    .container table thead th {
+        font-size: 18px;
     }
 }
+ 
+/* Ajuste para celulares */
+@media (max-width: 650px) {
+    .container {
+        overflow-x: auto;
+    }
+ 
+    .container table {
+        min-width: 650px;
+    }
+}
+ 
+/* Ajuste adicional para telas muito pequenas */
+@media (max-width: 500px) {
+    body {
+        padding: 12px;
+    }
+ 
+    .container {
+        padding: 18px;
+    }
+ 
+    h1 {
+        font-size: 28px;
+    }
+}
+ 
+/* Espaço para os botões de ação */
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+ 
+/* Formulário de exclusão */
+.acoes form {
+    margin: 0;
+}
+ 
+/* Botões Editar e Excluir */
+.container .acoes .btn-editar,
+.container .acoes .btn-excluir {
+    display: inline-block;
+    width: auto;
+    min-width: 85px;
+    padding: 10px 15px;
+    margin: 0;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+ 
+/* Botão Editar */
+.container .acoes .btn-editar {
+    background-color: #2563eb;
+}
+ 
+.container .acoes .btn-editar:hover {
+    background-color: #1d4ed8;
+}
+ 
+/* Botão Excluir */
+.container .acoes .btn-excluir {
+    background-color: #dc2626;
+}
+ 
+.container .acoes .btn-excluir:hover {
+    background-color: #b91c1c;
+}
+ 
+/* Rolagem horizontal para tabelas largas */
+.tabela-rolagem {
+    width: 100%;
+    overflow-x: auto;
+}
+ 
+/* Largura mínima da tabela com 5 colunas */
+.tabela-rolagem table {
+    min-width: 850px;
+}
+ 
+/* Evita que os botões fiquem espremidos */
+.container table th:last-child,
+.container table td:last-child {
+    width: 210px;
+    white-space: nowrap;
+}
+ 
+/* Limita a largura do formulário de edição */
+.container-formulario {
+    max-width: 550px;
+}
+ 

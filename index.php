@@ -45,6 +45,10 @@
 
         </form>
 
+        <p>
+            <a href="listar.php">Ver pessoas cadastradas</a>
+        </p>
+
     </div>
 
 </body>
